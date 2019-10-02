@@ -17,10 +17,10 @@ class App extends Component {
     return (
       <div className="app">
         <Menu />
-        <div className="App-main">
+        <main className="App-main">
         <SearchForm/>
         <NewsContainer newsType={local}/>
-        </div>
+        </main>
       </div>
     );
   }

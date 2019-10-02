@@ -9,8 +9,8 @@
   background-color: #141527;
   border: none;
   color: #ffffff;
-  font-size: 150%;
-  height: 35px;
+  font-size: 1.5em;
+  height: 1.5em;
   width: 300px;
 }
 
@@ -19,7 +19,7 @@
   border: none;
   border-radius: 75px;
   color: #ffffff;
-  font-size: 150%;
+  font-size: 1.5em;
   height: 55px;
   width: 225px;
 }
