@@ -10,7 +10,7 @@
 }
 
 .Menu-header-span {
-  color: #FFAE03;
+  color: #ffae03;
 }
 
 .Menu-ul {
@@ -31,6 +31,6 @@
 
 .Menu-li:hover,
 .Menu-li-span:hover {
-  background-color: #FFAE03;
-  border-radius: 0px 75px 75px 0px
+  background-color: #ffae03;
+  border-radius: 0px 75px 75px 0px;
 }

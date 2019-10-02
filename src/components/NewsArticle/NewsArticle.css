@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 500px;
-  margin: 2%
+  margin: 2%;
 }
 
 .NewsArticle-img {
@@ -19,7 +19,7 @@
 
 a {
   align-items: center;
-  background: #B569F1;
+  background: #b569f1;
   color: #ffffff;
   display: flex;
   justify-content: space-between;

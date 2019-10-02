@@ -1,25 +1,40 @@
-import React, { Component } from 'react';
-import local from '../../data/local';
-import SearchForm from '../SearchForm/SearchForm'
-import Menu from '../Menu/Menu'
-import NewsContainer from '../NewsContainer/NewsContainer'
-import './App.css';
+import React, { Component } from "react";
+import local from "../../data/local";
+import technology from "../../data/technology";
+import entertainment from "../../data/entertainment";
+import science from "../../data/science";
+import health from "../../data/health";
+import SearchForm from "../SearchForm/SearchForm";
+import Menu from "../Menu/Menu";
+import NewsContainer from "../NewsContainer/NewsContainer";
+import "./App.css";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      local
-    }
+      data: {
+        local,
+        technology,
+        entertainment,
+        science,
+        health
+      },
+      current: local
+    };
   }
 
-  render () {
+  changeData = category => {
+    this.setState({ current: category });
+  };
+
+  render() {
     return (
       <div className="app">
-        <Menu />
+        <Menu data={this.state.data} changeData={this.changeData} />
         <main className="App-main">
-        <SearchForm/>
-        <NewsContainer newsType={local}/>
+          <SearchForm />
+          <NewsContainer newsType={this.state.current} />
         </main>
       </div>
     );
