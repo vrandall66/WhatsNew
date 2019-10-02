@@ -10,11 +10,12 @@ const NewsContainer = ({ newsType }) => {
         headline={article.headline}
         description={article.description}
         url={article.url}
-        image={article.image} />
+        img={article.img}
+       />
     );
   });
   return (
-    <div>
+    <div className='NewsContainer'>
       {newsArticles}
     </div>
   )

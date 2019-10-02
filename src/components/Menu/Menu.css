@@ -1,0 +1,30 @@
+.Menu {
+  color: #ffffff;
+  padding: 0% 2%;
+  width: 20%;
+}
+
+.Menu-header {
+  font-size: 220%;
+  padding: 10% 2%;
+}
+
+.Menu-header-span {
+  color: #FFAE03;
+}
+
+.Menu-ul {
+  list-style: none;
+  font-size: 150%;
+}
+
+.Menu-li {
+  align-items: center;
+  display: flex;
+  margin: 10% 2% 18% 2%;
+}
+
+.Menu-li-span {
+  font-size: 150%;
+  margin-right: 10%;
+}

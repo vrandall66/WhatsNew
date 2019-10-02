@@ -1,0 +1,36 @@
+.NewsArticle {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  margin: 2%
+}
+
+.NewsArticle-img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.NewsArticle-link {
+  font-size: 150%;
+}
+
+a {
+  align-items: center;
+  background: #B569F1;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+  text-decoration: none;
+}
+
+h2 {
+  padding: 0% 2%;
+}
+
+p {
+  padding: 2%;
+}
