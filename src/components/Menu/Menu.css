@@ -33,4 +33,5 @@
 .Menu-li-span:hover {
   background-color: #ffae03;
   border-radius: 0px 75px 75px 0px;
+  cursor: pointer;
 }
