@@ -50,8 +50,8 @@ class App extends Component {
       <div className="app">
         <Menu changeData={this.changeData} />
         <main className="App-main">
-          <SearchForm />
-          <NewsContainer newsType={this.state.current} />
+          <SearchForm searchArticles={this.searchArticles}/>
+          <NewsContainer newsType={this.state.displayed} />
         </main>
       </div>
     );
