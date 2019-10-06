@@ -41,5 +41,15 @@ describe("SearchForm", () => {
     expect(wrapper.instance().handleChange).toHaveBeenCalledWith(mockEvent);
   });
 
-  it("should filter current category by search input and clear input for next search", () => {});
+  it("should be able to clear it's own state", () => {
+    const mockState = { search: "nasa" };
+
+    wrapper.instance().setState(mockState);
+
+    expect(wrapper.state()).toEqual({ search: "nasa" });
+
+    wrapper.instance().clearState();
+
+    expect(wrapper.state()).toEqual({ search: "" });
+  });
 });

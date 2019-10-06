@@ -13,16 +13,16 @@ class SearchForm extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleSearch = event => {
-    event.preventDefault();
-    this.props.searchArticles(this.state.search);
-    this.clearState();
-  };
-
   clearState = () => {
     this.setState({
       search: ""
     });
+  };
+
+  handleSearch = event => {
+    event.preventDefault();
+    this.props.searchArticles(this.state.search);
+    this.clearState();
   };
 
   keyDown = (event) => {
