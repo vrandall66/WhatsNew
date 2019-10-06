@@ -25,6 +25,12 @@ class SearchForm extends React.Component {
     });
   };
 
+  keyDown = (event) => {
+    if (event.keyCode === 13) {
+      this.handleSearch(event);
+    }
+  }
+
   render() {
     return (
       <form className="SearchForm">
@@ -35,6 +41,7 @@ class SearchForm extends React.Component {
           name="search"
           value={this.state.search}
           onChange={event => this.handleChange(event)}
+          onKeyDown={event => this.keyDown(event)}
         />
         <button
           type="button"
