@@ -7,11 +7,13 @@ exports[`NewsArticle should match the snapshot 1`] = `
   <img
     alt=""
     className="NewsArticle-img"
+    src=""
   />
   <h2 />
   <p />
   <a
     className="NewsArticle-link"
+    href=""
   >
     Link to article
     <span>

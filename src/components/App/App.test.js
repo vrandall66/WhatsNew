@@ -15,13 +15,11 @@ describe("App", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it("should update state upon change data being invoked", () => {});
-  const mockEvent = {
-    target: "",
-    id: "science"
-  };
-  const expectedCategory = science;
-  wrapper.instance().changeData(mockEvent);
+  it("should update state upon change data being invoked", () => {
+    const mockEvent = { target: { id: 'science' } };
+    const expectedCategory = science;
+    wrapper.instance().changeData(mockEvent);
 
-  expect(wrapper.state("current")).toEqual(expectedCategory);
+    expect(wrapper.state("current")).toEqual(expectedCategory);
+  });
 });
