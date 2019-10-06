@@ -35,22 +35,26 @@ class App extends Component {
   searchArticles = searchInputText => {
     let searchedArticles = this.state.current.filter(article => {
       return (
-        article.headline.toUpperCase().includes(searchInputText.toUpperCase()) ||
-        article.description.toUpperCase().includes(searchInputText.toUpperCase())
-      )
+        article.headline
+          .toUpperCase()
+          .includes(searchInputText.toUpperCase()) ||
+        article.description
+          .toUpperCase()
+          .includes(searchInputText.toUpperCase())
+      );
     });
 
     this.setState({
       displayed: searchedArticles
-    })
-  }
+    });
+  };
 
   render() {
     return (
       <div className="app">
         <Menu changeData={this.changeData} />
         <main className="App-main">
-          <SearchForm searchArticles={this.searchArticles}/>
+          <SearchForm searchArticles={this.searchArticles} />
           <NewsContainer newsType={this.state.displayed} />
         </main>
       </div>

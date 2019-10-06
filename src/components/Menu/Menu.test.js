@@ -15,6 +15,7 @@ describe("Menu", () => {
   });
 
   describe("should call change data upon a news category being selected", () => {
+    
     it("should change data upon the local category being selected", () => {
       const mockEvent = {
         target: {
@@ -29,6 +30,7 @@ describe("Menu", () => {
 
       expect(mockChangeData).toHaveBeenCalledWith(mockEvent);
     });
+
     it("should change data upon the technology category being selected", () => {
       const mockEvent = {
         target: {
@@ -43,6 +45,7 @@ describe("Menu", () => {
 
       expect(mockChangeData).toHaveBeenCalledWith(mockEvent);
     });
+
     it("should change data upon the entertainment category being selected", () => {
       const mockEvent = {
         target: {
@@ -57,6 +60,7 @@ describe("Menu", () => {
 
       expect(mockChangeData).toHaveBeenCalledWith(mockEvent);
     });
+
     it("should change data upon the science category being selected", () => {
       const mockEvent = {
         target: {
@@ -71,6 +75,7 @@ describe("Menu", () => {
 
       expect(mockChangeData).toHaveBeenCalledWith(mockEvent);
     });
+
     it("should change data upon the health category being selected", () => {
       const mockEvent = {
         target: {

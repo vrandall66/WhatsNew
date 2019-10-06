@@ -13,31 +13,47 @@ const Menu = ({ changeData }) => {
         What's <span className="Menu-header-span">New?</span>
       </h1>
       <ul className="Menu-ul">
-        <li className="Menu-li" id="local" onClick={(event) => changeData(event)}>
+        <li className="Menu-li" id="local" onClick={event => changeData(event)}>
           <span className="Menu-li-span">
             <TiLocationOutline />
           </span>
           Local News
         </li>
-        <li className="Menu-li" id="technology" onClick={(event) => changeData(event)}>
+        <li
+          className="Menu-li"
+          id="technology"
+          onClick={event => changeData(event)}
+        >
           <span className="Menu-li-span">
             <FaCogs />
           </span>
           Technology
         </li>
-        <li className="Menu-li" id="entertainment" onClick={(event) => changeData(event)}>
+        <li
+          className="Menu-li"
+          id="entertainment"
+          onClick={event => changeData(event)}
+        >
           <span className="Menu-li-span">
             <GiTicket />
           </span>
           Entertainment
         </li>
-        <li className="Menu-li" id="science" onClick={(event) => changeData(event)}>
+        <li
+          className="Menu-li"
+          id="science"
+          onClick={event => changeData(event)}
+        >
           <span className="Menu-li-span">
             <GiMicroscope />
           </span>
           Science
         </li>
-        <li className="Menu-li" id="health" onClick={(event) => changeData(event)}>
+        <li
+          className="Menu-li"
+          id="health"
+          onClick={event => changeData(event)}
+        >
           <span className="Menu-li-span">
             <FaHeartbeat />
           </span>
