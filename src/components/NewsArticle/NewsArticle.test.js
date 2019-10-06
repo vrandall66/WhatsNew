@@ -1,16 +1,16 @@
 import React from "react";
 import { shallow } from "enzyme";
-import NewsArticle from './NewsArticle'
+import NewsArticle from "./NewsArticle";
 
 describe("NewsArticle", () => {
   it("should match the snapshot", () => {
     let article = {
-      description: '',
-      headline: '',
+      description: "",
+      headline: "",
       id: 1,
-      img: '',
-      url: ''
-    }
+      img: "",
+      url: ""
+    };
     const wrapper = shallow(
       <NewsArticle
         key={article.id}
@@ -18,7 +18,8 @@ describe("NewsArticle", () => {
         description={article.description}
         url={article.url}
         img={article.img}
-      />)
+      />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
