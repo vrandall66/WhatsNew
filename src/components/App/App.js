@@ -20,18 +20,35 @@ class App extends Component {
         science,
         health
       },
-      current: local
+      current: local,
+      displayed: local
     };
   }
 
-  changeData = category => {
-    this.setState({ current: category });
+  changeData = event => {
+    this.setState({
+      current: this.state.data[event.target.id],
+      displayed: this.state.data[event.target.id]
+    });
   };
+
+  searchArticles = searchInputText => {
+    let searchedArticles = this.state.current.filter(article => {
+      return (
+        article.headline.toUpperCase().includes(searchInputText.toUpperCase()) ||
+        article.description.toUpperCase().includes(searchInputText.toUpperCase())
+      )
+    });
+
+    this.setState({
+      displayed: searchedArticles
+    })
+  }
 
   render() {
     return (
       <div className="app">
-        <Menu data={this.state.data} changeData={this.changeData} />
+        <Menu changeData={this.changeData} />
         <main className="App-main">
           <SearchForm />
           <NewsContainer newsType={this.state.current} />
