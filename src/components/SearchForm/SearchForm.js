@@ -16,7 +16,7 @@ class SearchForm extends React.Component {
   clearState = () => {
     this.setState({
       search: ""
-    });
+    }); 
   };
 
   handleSearch = event => {
@@ -54,20 +54,5 @@ class SearchForm extends React.Component {
     );
   }
 }
-
-// {/* <header className="SearchForm" >
-//   <input
-//     className="input--search"
-//     placeholder="Search for news articles here..."
-//     name="search"
-//     value={this.state.search}
-//     onChange={event => this.handleChange(event)}>
-//   </input>
-//   <button
-//     className="button--search"
-//     onClick={event => this.handleSearch(event)}>
-//     Search Now
-//         </button>
-// </header> */}
 
 export default SearchForm;

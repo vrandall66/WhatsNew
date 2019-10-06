@@ -4,10 +4,10 @@ import SearchForm from "./SearchForm";
 
 describe("SearchForm", () => {
   let wrapper;
+  const mockSearchFunc = jest.fn();
 
   beforeEach(() => {
-    const mockSearch = jest.fn();
-    wrapper = shallow(<SearchForm searchArticles={mockSearch} />);
+    wrapper = shallow(<SearchForm searchArticles={mockSearchFunc} />);
   });
 
   it("Should match the snapshot", () => {
@@ -45,11 +45,30 @@ describe("SearchForm", () => {
     const mockState = { search: "nasa" };
 
     wrapper.instance().setState(mockState);
-
     expect(wrapper.state()).toEqual({ search: "nasa" });
 
     wrapper.instance().clearState();
-
     expect(wrapper.state()).toEqual({ search: "" });
+  });
+
+  it("should call searchArticles and clearState upon event", () => {
+    const mockState = { search: "nasa" };
+    wrapper.instance().setState(mockState);
+    const mockPreventEvent = { preventDefault: jest.fn() };
+    wrapper.instance().clearState = jest.fn();
+
+    wrapper.instance().handleSearch(mockPreventEvent);
+
+    expect(wrapper.instance().clearState).toHaveBeenCalled();
+    expect(mockSearchFunc).toHaveBeenCalledWith("nasa");
+  });
+
+  it("should run handle search upon enter kemydown in input field", () => {
+    const mockEvent = {
+      target: {
+        name: "search",
+        value: "nasa"
+      }
+    };
   });
 });
