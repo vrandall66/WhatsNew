@@ -63,12 +63,26 @@ describe("SearchForm", () => {
     expect(mockSearchFunc).toHaveBeenCalledWith("nasa");
   });
 
-  it("should run handle search upon enter kemydown in input field", () => {
-    const mockEvent = {
-      target: {
-        name: "search",
-        value: "nasa"
-      }
-    };
-  });
+  it("should run handle search upon enter keydown in input field", () => {
+    const mockKeyEvent = { keyCode: 13, preventDefault: jest.fn() }
+    wrapper.instance().keyDown(mockKeyEvent);
+
+    expect(mockSearchFunc).toHaveBeenCalled();
+    });
+
+
+    it("should invoke an event listener on keydown of input", () => {
+      const mockKeyEvent = { keyCode: 13, preventDefault: jest.fn() }
+      wrapper.find("input").simulate("keydown", mockKeyEvent)
+
+      expect(mockSearchFunc).toHaveBeenCalled();
+    });
+
+    it('should invoke an event listener upon click of search button', () => {
+      const mockPreventEvent = { preventDefault: jest.fn() }
+      wrapper.find('button').simulate('click', mockPreventEvent)
+
+      expect(mockSearchFunc).toHaveBeenCalled();
+    })
+
 });
