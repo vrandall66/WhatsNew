@@ -4,5 +4,6 @@
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   margin: 1%;
+  overflow: scroll;
   text-align: center;
 }

@@ -16,7 +16,7 @@ class SearchForm extends React.Component {
   clearState = () => {
     this.setState({
       search: ""
-    }); 
+    });
   };
 
   handleSearch = event => {
@@ -25,11 +25,11 @@ class SearchForm extends React.Component {
     this.clearState();
   };
 
-  keyDown = (event) => {
+  keyDown = event => {
     if (event.keyCode === 13) {
       this.handleSearch(event);
     }
-  }
+  };
 
   render() {
     return (

@@ -64,25 +64,26 @@ describe("SearchForm", () => {
   });
 
   it("should run handle search upon enter keydown in input field", () => {
-    const mockKeyEvent = { keyCode: 13, preventDefault: jest.fn() }
+    const mockKeyEvent = { keyCode: 13, preventDefault: jest.fn() };
+
     wrapper.instance().keyDown(mockKeyEvent);
 
     expect(mockSearchFunc).toHaveBeenCalled();
-    });
+  });
 
+  it("should invoke an event listener on keydown of input", () => {
+    const mockKeyEvent = { keyCode: 13, preventDefault: jest.fn() };
 
-    it("should invoke an event listener on keydown of input", () => {
-      const mockKeyEvent = { keyCode: 13, preventDefault: jest.fn() }
-      wrapper.find("input").simulate("keydown", mockKeyEvent)
+    wrapper.find("input").simulate("keydown", mockKeyEvent);
 
-      expect(mockSearchFunc).toHaveBeenCalled();
-    });
+    expect(mockSearchFunc).toHaveBeenCalled();
+  });
 
-    it('should invoke an event listener upon click of search button', () => {
-      const mockPreventEvent = { preventDefault: jest.fn() }
-      wrapper.find('button').simulate('click', mockPreventEvent)
+  it("should invoke an event listener upon click of search button", () => {
+    const mockPreventEvent = { preventDefault: jest.fn() };
 
-      expect(mockSearchFunc).toHaveBeenCalled();
-    })
+    wrapper.find("button").simulate("click", mockPreventEvent);
 
+    expect(mockSearchFunc).toHaveBeenCalled();
+  });
 });

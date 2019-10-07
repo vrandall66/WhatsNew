@@ -15,7 +15,6 @@ describe("Menu", () => {
   });
 
   describe("should call change data upon a news category being selected", () => {
-    
     it("should change data upon the local category being selected", () => {
       const mockEvent = {
         target: {
