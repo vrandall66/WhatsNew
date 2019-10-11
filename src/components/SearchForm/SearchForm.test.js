@@ -71,6 +71,15 @@ describe("SearchForm", () => {
     expect(mockSearchFunc).toHaveBeenCalled();
   });
 
+  it('should not run handle search upon keydown in input field', () => {
+    const mockKeyEvent2 = { keyCode: 1, preventDefault: jest.fn() }
+    
+    mockSearchFunc.mockClear();
+    wrapper.instance().keyDown(mockKeyEvent2);
+
+    expect(mockSearchFunc).not.toHaveBeenCalled();
+  })
+
   it("should invoke an event listener on keydown of input", () => {
     const mockKeyEvent = { keyCode: 13, preventDefault: jest.fn() };
 

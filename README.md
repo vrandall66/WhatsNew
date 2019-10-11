@@ -14,5 +14,5 @@ This was my first serious dive into the React framework utilizing the Jest and E
 
 ## Check out Demos of What's New Below:
 
-![Scrolling gif of What\'s New?](./screenshots/Scrolling.gif)
-![Search functionality gif of What\'s New?](./screenshots/Science-search.gif)
+![Scrolling gif of What's New?](./screenshots/Scrolling.gif)
+![Search functionality gif of What's New?](./screenshots/Science-search.gif)

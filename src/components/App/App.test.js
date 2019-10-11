@@ -1,7 +1,7 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import { shallow } from "enzyme";
 import App from "./App";
-import local from "../../data/local";
 import science from "../../data/science";
 
 describe("App", () => {
@@ -9,6 +9,12 @@ describe("App", () => {
 
   beforeEach(() => {
     wrapper = shallow(<App />);
+  });
+
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
   });
 
   it("should match the wrapper", () => {
